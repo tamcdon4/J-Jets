@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact • J-Jets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="jjets.css">
+</head>
+<body>
+  <div id="wrapper">
+
+    <header>
+      <div class="logo">J-Jets</div>
+      <h1><a href="index.html">J-Jets</a></h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aircraft.html">Aircraft</a></li>
+        <li><a href="packages.html">Travel Packages</a></li>
+        <li><a href="crew.html">Crew</a></li>
+        <li><a href="inflight.html">Inflight Experience</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="contacthero" class="hero" style="background-image:url('images/contact-hero.jpg');"></div>
+
+    <main>
+      <h2>Contact J-Jets</h2>
+      <p>Have a question or want to plan a trip? Send a message below.</p>
+
+      <form action="#" method="post" aria-label="Contact form">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="(###) ###-####">
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic" required>
+          <option value="">Select…</option>
+          <option>General Question</option>
+          <option>Aircraft Inquiry</option>
+          <option>Travel Packages</option>
+          <option>Crew & Service</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input id="date" name="date" type="date">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your trip or question…" required></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+
+      <p id="contact" class="text" style="margin-top:1em;">
+        Email: <span id="emailText">charters@jjets.com</span>
+        • Phone: 888-893-4481
+        • Location: Boise, ID
+      </p>
+
+      <p class="text">
+        <button type="button" id="copyEmail" style="background:transparent;border:1px solid var(--accent);padding:.4em .8em;color:var(--text);cursor:pointer;">
+          Copy Email
+        </button>
+      </p>
+    </main>
+
+    <footer>
+      &copy; 2025 J-Jets • Contact: charters@jjets.com
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('copyEmail')?.addEventListener('click', function(){
+      const email = document.getElementById('emailText').textContent.trim();
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email);
+        this.textContent = 'Email Copied!';
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = email;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        this.textContent = 'Email Copied!';
+      }
+    });
+  </script>
+</body>
+</html>

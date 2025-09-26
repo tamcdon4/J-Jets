@@ -1,0 +1,144 @@
+/* jjets.css */
+:root{
+  --text:#f8f8fb;
+  --background:#161d22;
+  --primary:#315ed8;
+  --secondary:#11b7d4;
+  --accent:#0854a6;
+}
+
+*{box-sizing:border-box}
+img{max-width:100%;display:block}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+  color:var(--text);
+  background:var(--background);
+}
+
+#wrapper{
+  width:92%;
+  margin:0 auto;
+  background:var(--background);
+  border:1px solid var(--accent);
+  box-shadow:3px 3px 3px rgba(0,0,0,.3);
+}
+
+/* Header: centered logo + right-aligned name */
+header{
+  position:relative;
+  background:var(--primary);
+  color:#fff;
+  min-height:100px;           /* ensures room for logo */
+}
+header h1{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  letter-spacing:.25em;
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+  white-space:nowrap;
+}
+header h1 a{color:#fff;text-decoration:none}
+
+.logo{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:72px;height:72px;
+  border:2px solid #fff;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.8rem;color:#fff;background:var(--background);
+  text-transform:uppercase;letter-spacing:.05em;
+}
+
+/* Nav */
+nav{
+  background:#111;
+  font-weight:bold;
+  text-align:center;
+  border-top:1px solid var(--accent);
+  border-bottom:1px solid var(--accent);
+}
+nav ul{list-style:none;margin:0;padding:0}
+nav li{border-bottom:1px solid var(--accent)}
+nav a{display:block;padding:.5em 1em;text-decoration:none}
+nav a:link,nav a:visited{color:var(--secondary)}
+nav a:hover,nav a[aria-current="page"]{color:var(--accent)}
+@media(min-width:600px){
+  nav ul{display:flex;justify-content:space-evenly}
+  nav li{border-bottom:none}
+}
+
+/* Hero */
+.hero{
+  height:300px;
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid var(--accent);
+}
+#homehero.hero{background-image:url("images/jet-hero.jpg")}
+
+/* Main */
+main{background:#1b232a;padding:1.25em}
+h2{
+  color:var(--secondary);
+  font-family:Georgia,"Times New Roman",serif;
+  text-shadow:1px 1px 0 #000;
+}
+h3{font-family:Georgia,"Times New Roman",serif;color:var(--primary)}
+.brand{color:var(--secondary);font-weight:bold}
+
+/* Four-card section */
+.flow{display:grid;gap:1.25em;margin-top:1em}
+.flow section{background:#222;border:1px solid var(--accent);padding:.75em;color:var(--text)}
+.thumb{
+  height:180px;
+  background-size:cover;
+  background-position:center;
+  border:1px solid var(--accent);
+  margin-bottom:.6em;
+}
+.text{text-align:center}
+
+@media(min-width:600px){
+  .flow{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:900px){
+  #wrapper{width:80%}
+  .flow{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Footer */
+footer{
+  background:#111;
+  font-size:75%;
+  font-style:italic;
+  text-align:center;
+  font-family:Georgia,"Times New Roman",serif;
+  padding:2em;
+  border-top:1px solid var(--accent);
+  color:var(--text);
+}
+
+/* Optional: table & form styles for other pages */
+table{border:2px solid var(--primary);border-collapse:collapse;width:100%}
+th,td{padding:.5em;border:2px solid var(--primary)}
+td{text-align:center}
+td.text{text-align:left}
+tbody tr:nth-of-type(odd){background:#2a3340}
+
+form{display:flex;flex-direction:column}
+input,textarea{margin-bottom:.5em}
+input[type="submit"]{
+  background:transparent;border:1px solid var(--accent);
+  padding:.5em 1em;cursor:pointer;align-self:flex-start;color:var(--text)
+}
+input[type="submit"]:hover{
+  text-decoration:underline;border-color:var(--primary);color:#fff
+}
