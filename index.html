@@ -8,6 +8,16 @@
   <meta name="author" content="Terryn McDonald">
   <meta name="keywords" content="private jet, charter, business travel, luxury aviation, aircraft fleet, inflight experience">
   <link rel="stylesheet" href="jjets.css">
+  <style>
+    /* safe image defaults so nothing stretches weird */
+    img, picture, video { max-width: 100%; height: auto; display: block; }
+    .thumb img { width: 100%; height: 220px; object-fit: cover; object-position: center; }
+    .flow { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .feature-link { text-decoration: none; color: inherit; }
+    .hero-banner { position: relative; }
+    .hero-banner img { width: 100%; height: 52vh; object-fit: cover; }
+    .hero-overlay { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; padding: 1rem; }
+  </style>
 </head>
 <body>
   <div id="wrapper">
@@ -31,7 +41,8 @@
     </header>
 
     <section class="hero-banner">
-      <img src="images/Jet Sunset.jpg" alt="Private jet at sunset with reflection on wet tarmac">
+      <!-- files live in repo root; encode spaces -->
+      <img src="./Jet%20Sunset.jpg" alt="Private jet at sunset with reflection on wet tarmac">
       <div class="hero-overlay">
         <h2>Private Aviation. Simplified.</h2>
         <p>Luxury, convenience, and professionalism—every mile of the way.</p>
@@ -53,7 +64,7 @@
         <a href="aircraft.html" class="feature-link">
           <article>
             <div class="thumb">
-              <img src="images/Our Fleet image.jpg" alt="Businessman walking toward private jet on the tarmac">
+              <img src="./Our%20Fleet%20image.jpg" alt="Businessman walking toward private jet on the tarmac">
             </div>
             <h3>Aircraft</h3>
             <p>Explore our versatile fleet—from light jets to long-range business aircraft designed for comfort, efficiency, and style.</p>
@@ -63,7 +74,7 @@
         <a href="packages.html" class="feature-link">
           <article>
             <div class="thumb">
-              <img src="images/travel packages.jpg" alt="Luxury beach vacation with umbrella and lounge chair overlooking turquoise water">
+              <img src="./travel%20packages.jpg" alt="Luxury beach vacation overlooking turquoise water">
             </div>
             <h3>Travel Packages</h3>
             <p>Discover curated travel experiences and custom itineraries—whether it’s a weekend in Vegas or a dream trip to Greece.</p>
@@ -73,7 +84,7 @@
         <a href="crew.html" class="feature-link">
           <article>
             <div class="thumb">
-              <img src="images/meet our crew.jpg" alt="Corporate flight attendant smiling inside a private jet cabin">
+              <img src="./meet%20our%20crew.jpg" alt="Corporate flight attendant smiling inside a private jet cabin">
             </div>
             <h3>Meet the Crew</h3>
             <p>Get to know the heart of J-Jets. Our professional cabin attendants ensure every detail of your flight is handled with care.</p>
@@ -83,7 +94,7 @@
         <a href="inflight.html" class="feature-link">
           <article>
             <div class="thumb">
-              <img src="images/inflight experience.jpg" alt="Passenger relaxing and reading on a private jet cabin">
+              <img src="./inflight%20experience.jpg" alt="Passenger relaxing and reading on a private jet">
             </div>
             <h3>Inflight Experience</h3>
             <p>Indulge in luxury inflight service—from fine dining to spa-style comfort, every trip is a personalized experience.</p>
@@ -99,3 +110,4 @@
   </div>
 </body>
 </html>
+
