@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Crew • J-Jets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet the J-Jets crew — professional, safety-focused, and service-driven, led by cabin attendant Terryn McDonald.">
+  <meta name="author" content="Terryn McDonald">
+  <meta name="keywords" content="J-Jets, private aviation, cabin attendant, corporate flight attendant, crew, business jet, aviation management">
+  <link rel="stylesheet" href="jjets.css">
+</head>
+<body>
+  <div id="wrapper">
+
+    <header>
+      <div class="top-header">
+        <div class="logo-circle">J-Jets</div>
+        <h1 class="brand-title">J-Jets</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aircraft.html">Aircraft</a></li>
+          <li><a href="packages.html">Travel Packages</a></li>
+          <li><a href="crew.html" aria-current="page">Crew</a></li>
+          <li><a href="inflight.html">Inflight Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>Meet the Crew</h2>
+      </section>
+
+      <section class="about-section">
+        <div class="bio-text">
+          <h3>Service Philosophy</h3>
+          <ul>
+            <li><strong>Safety first:</strong> Detailed briefings, secure cabins, and proactive communication.</li>
+            <li><strong>Hospitality:</strong> Thoughtful details, personalized service, and guest comfort for all ages.</li>
+            <li><strong>Efficiency:</strong> Seamless coordination from runway to destination.</li>
+          </ul>
+
+          <h3>About Terryn</h3>
+          <p>
+            Terryn McDonald is a dedicated Business Administration student pursuing a Master’s in Business Aviation Management.
+            With experience across charter advising, customer service, and inflight operations, she brings professionalism and
+            passion to every aspect of private aviation.
+          </p>
+          <p>
+            Her career goals include earning a corporate flight attendant certification and a dispatcher’s license, making her
+            a well-rounded professional in the aviation industry. Terryn is passionate about creating seamless, personalized
+            experiences for business travelers and families—balancing safety, service, and elegance in the skies.
+          </p>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/terrynazella/" target="_blank" rel="noopener" class="social-box">Instagram</a>
+            <a href="https://www.linkedin.com/in/terryn-mcdonald/" target="_blank" rel="noopener" class="social-box">LinkedIn</a>
+            <a href="mailto:tamcdon4@asu.edu" class="social-box">Email Me</a>
+          </div>
+        </div>
+
+        <div class="bio-photo">
+          <div class="photo-hover">
+            <img src="images/Flightattendant.jpg" alt="Terryn McDonald smiling in a private jet cabin" class="photo-still">
+            <video class="photo-video" controls preload="metadata" loop muted playsinline>
+              <source src="images/Flightattendant.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <p id="contact" class="text" style="text-align:center; margin-top:2rem;">
+        For crew coordination or inquiries: <a href="contact.html">charters@jjets.com</a>
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 J-Jets • Contact: <a href="contact.html">charters@jjets.com</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Hover behavior for video playback
+    const hoverWrap = document.querySelector('.photo-hover');
+    const hoverVideo = hoverWrap?.querySelector('.photo-video');
+
+    if (hoverWrap && hoverVideo) {
+      hoverWrap.addEventListener('mouseenter', () => {
+        hoverVideo.currentTime = 0;
+        hoverVideo.play().catch(() => {});
+      });
+      hoverWrap.addEventListener('mouseleave', () => {
+        hoverVideo.pause();
+        hoverVideo.currentTime = 0;
+      });
+    }
+  </script>
+</body>
+</html>
